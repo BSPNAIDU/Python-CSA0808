@@ -1389,19 +1389,25 @@ def profile_page():
 
     user = st.session_state.user or {}
 
+    # =================================================
+    # USER DETAILS
+    # =================================================
+
     st.info(f"""
 ### User Details
 
 **Name:** {user.get("fullname", "User")}  
 **Email:** {user.get("email", "Not Available")}  
 **User ID:** {user.get("id", "Not Available")}
-
-### Internship Project Details
-
-**Project Name:** Voice-Based Concept Understanding Analyser (VBCUA)  
-**Project Type:** Internship Project  
-**Purpose:** To evaluate spoken conceptual explanations using speech-to-text, semantic similarity, audio feature extraction, scoring, and report generation.
 """)
+
+    # =================================================
+    # TECHNOLOGY STACK
+    # =================================================
+
+    st.subheader(
+        "🛠️ Technology Stack"
+    )
 
     c1, c2, c3 = st.columns(3)
 
